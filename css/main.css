@@ -1,0 +1,509 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+
+
+:root {
+    /* Colors */
+    --white: #FFFFFF;
+    --black: #000000;
+    --gray1: #CCCCCC;
+    --grayCards: #BCBCBC;
+    --bannerColor: #AF0E4E;
+    --gray2: #555555;
+    --gray3: #00000080;
+    --gray4: #545454;
+    --mainBlue: #0D5C91;
+    --mainRed: #AF0200;
+    --white2: #F8F8F8;
+    --redSale: #E02020;
+
+    /* Font family */
+    --mainFont: 'Lato', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--mainFont);
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+
+}
+
+.imgLenovo {
+    width: 180px
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+}
+
+.navContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-left: 8px;
+    margin-bottom: 10px;
+}
+
+.mobile-menu,
+.desktop-menu {
+    display: none;
+}
+
+.open-menu,
+.close-menu {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    width: 3rem;
+    height: 3rem;
+    border: 0;
+    background: transparent;
+    gap: .65rem;
+    margin-top: 1rem;
+    margin-right: 1rem;
+}
+
+.open-menu > div,
+.close-menu > div {
+    background: var(--black);
+    height: 2px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+nav{
+    font-weight: 700;
+}
+
+.mobile-menu {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white);
+    position: fixed;
+    inset: 0;
+    padding: 2rem;
+}
+
+.mobile-menu__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mobile-menu__nav {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+
+.mobile-menu__nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.mobile-menu__nav ul li a {
+    color: var(--black);
+    font-size: 20px;
+}
+
+.input-wrapper {
+    display: flex;
+    flex-direction: row;
+    margin-right: 3px;
+
+}
+
+.input {
+    border: 1px black solid;
+    border-radius: 4px 0px 0px 4px;
+}
+
+.input::placeholder {
+    opacity: 0;
+}
+
+.subNav-mobile {
+    display: flex;
+    flex-direction: column;
+    font-weight: 400;
+}
+
+.subNav-mobile ul li a{
+    font-size: 18px;
+    gap: 0.1rem;
+}
+
+
+.search {
+    background-color: var(--black);
+    padding: 0.2rem;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px 4px 4px 0px;
+    
+}
+
+.subNav {
+    display: none;
+}
+
+.banner {
+    text-align: center;
+    padding: 15px;
+    background-color: var(--bannerColor);
+    color: var(--white);
+}
+
+.banner a{
+    margin-left: 10px;
+    font-weight: 700;
+    text-decoration: underline;
+    color: var(--white);
+
+}
+.mainOptions {
+    border-bottom: var(--gray2) solid 2px;
+    border-top: var(--gray2) solid 2px;
+}
+
+.options {
+    font-size: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 9px;
+    padding: 1rem;
+    
+
+}
+
+.options li a {
+    color: var(--gray2);
+}
+
+.mainWrapper {
+    padding: 2rem;
+
+}
+
+.banner2 {
+    background-color: var(--bannerColor);
+    padding: 20px;
+    color: var(--white);
+    font-weight: 400;
+    font-size: 10px;
+    text-align: center;
+}
+
+.sectionOne {
+    display: flex;
+    margin-bottom: 35px;
+}
+
+.accordion {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    width: 5rem;
+}
+
+.inputAside {
+    display: none;
+}
+
+.seeMore {
+    display: none;
+}
+
+.select {
+    padding: 10px;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 10px;
+}
+
+.matchingResults {
+    font-size: 12px;
+}
+
+select {
+    border: solid var(--grayCards) 1px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.wrpapperCards {
+    display: flex;
+    flex-direction: column;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+}
+
+.cards--card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 200px;
+    min-height: 380px;
+    background-color: var(--white);
+    padding: 10px;
+    border: var(--grayCards) solid 1px;
+    border-radius: 5px;
+}
+
+.img--card {
+    width: 100%;
+}
+
+.door {
+    width: 140px;
+    background-color: var(--mainRed);
+    text-align: center;
+    color: var(--white);
+    padding: 6px;
+    font-size: 12px;
+    border-radius: 2px;
+}
+
+.door2 {
+    opacity: 0;
+}
+
+.titleCard {
+    color: var(--mainBlue);
+    font-weight: 700;
+}
+
+.price {
+    font-size: 26px;
+}
+
+.cupon {
+    font-size: 11px;
+}
+
+.button--card {
+    background-color: var(--mainBlue);
+    border-radius: 2px;
+    color: var(--white);
+    border: solid 1px var(--mainBlue);
+    font-weight: 400;
+    padding: 5px;
+    cursor: pointer;
+}
+
+
+@media screen and (min-width: 768px) {
+
+    .header {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .hero {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+    
+    .navContainerd{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 8px;
+    }
+
+    .imgLenovo {
+        width: 7rem;
+    }
+
+    .icons {
+        gap: 25px;
+        padding: 6px;
+        margin-right: 10px;
+    }
+
+    .icon {
+        width: 15px;
+    }
+
+    .open-menu {
+        display: none;
+    }
+
+    .desktop-menu {
+        display: flex;
+        justify-content: flex-start;
+        margin-left: 10px;
+        
+    }
+
+    .desktop-menu ul {
+        display: flex;
+        gap: 2rem;
+    }
+
+    .desktop-menu ul li a {
+        color: var(--black);
+        font-size: .9rem;
+    }
+
+    .input-wrapper {
+        margin-right: 15px;
+    }
+
+    .input {
+        width: 350px;
+        height: 35px;
+        padding: 1rem;
+    }
+
+    .input::placeholder { 
+        opacity: 1;
+        color: var(--black); 
+        font-weight: 400;
+    
+    }
+
+    .search {
+        padding-left: 20px;
+        padding-right: 20px;
+        max-height: 35px;
+    }
+
+    .subNav-mobile {
+        display: none;
+    }
+
+    .subNav {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 45px;
+        padding: 15px;
+        background-color: var(--white2);
+        margin-top: 2px;
+        font-size: 14px;
+    }
+
+    .subNav li a {
+        color: var(--black);
+    }
+
+    .subNav li:last-child a {
+        color: var(--redSale);
+    }
+
+    .options {
+        font-size: 24px;
+        font-weight: 400;
+        margin-left: 180px;
+        margin-right: 180px;
+    }
+
+    .mainWrapper {
+        padding: 3rem;
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+
+    .banner2 {
+        font-size: 15px;
+        padding: 2rem
+    }
+
+    .inputAside {
+        display: block;
+        padding: 5px;
+        margin: 10px;
+    }
+
+    .seeMore {
+        display: flex;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    .seeMore a{
+        color: var(--mainBlue);
+    }
+
+    .select {
+        /* max-width: ; */
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-left: 0px;
+    }
+
+    select{
+        padding: 15px;
+    }
+
+    .matchingResults {
+        font-size: 16px;
+    }
+
+    .cards {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .sectionOne {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .accordion {
+        width: 150px;
+    }
+
+    .models {
+        margin-bottom: 5px;
+    }    
+
+    hr {
+        margin-bottom: 15px;
+    }
+
+}
+
+.disabled {
+    display: none;
+}
