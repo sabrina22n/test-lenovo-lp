@@ -382,12 +382,11 @@ select {
     }
 
     .input-wrapper {
-        margin-right: 15px;
-        margin-bottom: 4px;
+        margin: 5px;
     }
 
     .input {
-        min-width: 350px;
+        min-width: 200px;
         height: 35px;
         padding: 1rem;
     }
@@ -438,8 +437,8 @@ select {
 
     .mainWrapper {
         padding: 2rem;
-        margin-left: 16%;
-        margin-right: 16%;
+        margin-left: 4%;
+        margin-right: 4%;
     }
 
     .banner2 {
@@ -503,6 +502,23 @@ select {
         margin-bottom: 15px;
     }
 
+}
+
+@media screen and (min-width: 1280px) {
+
+    .mainWrapper {
+        margin-left: 16%;
+        margin-right: 16%;
+    }
+
+    .input-wrapper {
+        margin-right: 15px;
+        margin-bottom: 4px;
+    }
+
+    .input {
+        min-width: 300px;
+    }
 }
 
 .disabled {
