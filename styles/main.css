@@ -42,7 +42,7 @@ ul {
 }
 
 .imgLenovo {
-    width: 180px
+    width: 180px;
 }
 
 .hero {
@@ -60,9 +60,7 @@ ul {
 .icons {
     display: flex;
     justify-content: space-between;
-    margin-top: 10px;
-    margin-left: 8px;
-    margin-bottom: 10px;
+    margin: 10px;
 }
 
 .mobile-menu,
@@ -198,7 +196,7 @@ nav{
     justify-content: space-around;
     flex-wrap: wrap;
     align-items: center;
-    gap: 9px;
+    gap: 4px;
     padding: 1rem;
     
 
@@ -276,12 +274,13 @@ select {
     flex-direction: column;
     justify-content: space-between;
     gap: 1rem;
-    width: 200px;
+    width: 250px;
     min-height: 380px;
     background-color: var(--white);
     padding: 10px;
     border: var(--grayCards) solid 1px;
     border-radius: 5px;
+    margin-bottom: 15px;
 }
 
 .img--card {
@@ -325,7 +324,6 @@ select {
     cursor: pointer;
 }
 
-
 @media screen and (min-width: 768px) {
 
     .header {
@@ -349,7 +347,7 @@ select {
     }
 
     .imgLenovo {
-        width: 7rem;
+        width: 160px;
     }
 
     .icons {
@@ -385,10 +383,11 @@ select {
 
     .input-wrapper {
         margin-right: 15px;
+        margin-bottom: 4px;
     }
 
     .input {
-        width: 350px;
+        min-width: 350px;
         height: 35px;
         padding: 1rem;
     }
@@ -403,7 +402,7 @@ select {
     .search {
         padding-left: 20px;
         padding-right: 20px;
-        max-height: 35px;
+        height: 35px;
     }
 
     .subNav-mobile {
@@ -413,6 +412,7 @@ select {
     .subNav {
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
         justify-content: center;
         gap: 45px;
         padding: 15px;
@@ -437,9 +437,9 @@ select {
     }
 
     .mainWrapper {
-        padding: 3rem;
-        margin-left: 20%;
-        margin-right: 20%;
+        padding: 2rem;
+        margin-left: 16%;
+        margin-right: 16%;
     }
 
     .banner2 {
@@ -464,7 +464,6 @@ select {
     }
 
     .select {
-        /* max-width: ; */
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -487,7 +486,9 @@ select {
 
     .sectionOne {
         display: flex;
+        justify-content: center;
         justify-content: space-between;
+        gap: 30px;
     }
 
     .accordion {
